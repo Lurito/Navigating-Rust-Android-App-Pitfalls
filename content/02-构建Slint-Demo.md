@@ -82,6 +82,6 @@ export ANDROID_NDK_ROOT="~/android-sdk-linux/ndk/27.2.12479018"
 cargo apk build --lib --release
 ```
 
-> ⚠️ 注意：构建过程中会自动从 Github 拉取 skia，中国大陆开发者最好能在有代理的情况下构建，否则构建速度会很缓慢，甚至导致构建失败。
+> 中国大陆开发者最好能在有代理的情况下构建，因为构建过程中会自动从 Github 拉取 skia。缺少网络代理可能会导致构建速度缓慢，甚至构建失败。
 
 编译可能需要一点时间……待执行完成后，我们的第一个 APK 就出现在 `../../target/debug/apk/weather-demo.apk` 了。
