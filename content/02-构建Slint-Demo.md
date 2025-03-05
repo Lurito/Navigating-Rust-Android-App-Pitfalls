@@ -13,13 +13,13 @@ cd slint/demos/weather-demo
 
 ## 安装 cargo-apk
 
-我们需要安装 [`cargo-apk`](https://crates.io/crates/cargo-apk) 作为编译和打包工具：
+我们需要安装 [`cargo-apk`](https://crates.io/crates/cargo-apk) 作为构建和打包工具：
 
 ``` Bash
 cargo install cargo-apk
 ```
 
-尽管 `cargo-apk` 在自己的主页上被标为弃用，且建议使用 [`xbuild`](https://crates.io/crates/xbuild) 作为替代。但 `xbuild` 在撰文时已经两年没有更新过，且可配置项远少于 `cargo-apk`，甚至在 crates.io 上连一个 `README.md` 主页都没有，实在不像一个可靠的工具项目。因此本文仍然建议用 `cargo-apk` 来编译和打包。
+尽管 `cargo-apk` 在自己的主页上被标为弃用，且建议使用 [`xbuild`](https://crates.io/crates/xbuild) 作为替代。但 `xbuild` 在撰文时已经两年没有更新过，且可配置项远少于 `cargo-apk`，甚至在 crates.io 上连一个 `README.md` 主页都没有，实在不像一个可靠的工具项目。因此本文仍然建议用 `cargo-apk` 来构建和打包。
 
 ## 配置 Android SDK 版本
 
@@ -74,9 +74,9 @@ path = "my-release-key.pfx"      # 须替换为实际文件名
 keystore_password = "mypassword" # 须替换为实际的密码
 ```
 
-## 执行编译并打包为 APK
+## 执行构建并打包为 APK
 
-在终端中运行以下命令，配置环境变量（需要改为实际的安装位置）并编译打包：
+在终端中运行以下命令，配置环境变量（需要改为实际的安装位置）并构建打包：
 
 ``` Bash
 # 须替换下面两个变量为实际的安装位置
@@ -88,4 +88,4 @@ cargo apk build --lib --release
 
 > 中国大陆开发者最好能在有代理的情况下构建，因为构建过程中会自动从 Github 拉取 skia。缺少网络代理可能会导致构建速度缓慢，甚至构建失败。
 
-编译可能需要一点时间……待执行完成后，我们的第一个 APK 就出现在 `../../target/debug/apk/weather-demo.apk` 了。
+构建可能需要一点时间……待执行完成后，我们的第一个 APK 就出现在 `../../target/debug/apk/weather-demo.apk` 了。
