@@ -1,10 +1,10 @@
 # 02 - 构建 Slint Demo
 
-接下来我们就用 Slint 来构建一个安卓 demo 程序。
+接下来我们就用 [Slint](https://slint.dev/) 来构建一个安卓 demo 程序。
 
 ## 拉取仓库
 
-首先，将 slint 的仓库拉取到本地，并进入 `Weather Demo` 示例的目录：
+首先，将 Slint 的仓库拉取到本地，并进入 `Weather Demo` 示例的目录：
 
 ``` Bash
 git clone https://github.com/slint-ui/slint.git
@@ -35,7 +35,7 @@ min_sdk_version = 18 # Android 4.3，须替换为实际的最低可安装版本
 
 ## 配置签名证书
 
-安卓 APP 需要签名才能安装，我们需要先生成一个 X.509 标准、PKS12 格式、ECDSA 算法的证书来签名：
+安卓 APK 需要签名才能安装，我们需要先生成一个 X.509 标准、PKS12 格式、ECDSA 算法的证书来签名：
 
 ``` Bash
 # 定义变量：名称、别名、密码和文件名
@@ -70,7 +70,7 @@ path = "my-release-key.jks"      # 须替换为实际文件名
 keystore_password = "mypassword" # 须替换为实际的密码
 ```
 
-## 执行测试编译
+## 执行编译并打包为 APK
 
 配置环境变量（需要改为实际的安装位置）并编译打包：
 
