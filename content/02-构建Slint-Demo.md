@@ -66,7 +66,7 @@ rm ecdsa.crt ecdsa.key
 
 ``` toml
 [package.metadata.android.signing.release]
-path = "my-release-key.jks"      # 须替换为实际文件名
+path = "my-release-key.pfx"      # 须替换为实际文件名
 keystore_password = "mypassword" # 须替换为实际的密码
 ```
 
