@@ -65,6 +65,10 @@ rm ecdsa.crt ecdsa.key
 生成证书后，需要编辑 `Cargo.toml`，在文件末尾添加证书配置：
 
 ``` toml
+[package.metadata.android.signing.dev]
+path = "my-release-key.pfx"      # 须替换为实际文件名
+keystore_password = "mypassword" # 须替换为实际的密码
+
 [package.metadata.android.signing.release]
 path = "my-release-key.pfx"      # 须替换为实际文件名
 keystore_password = "mypassword" # 须替换为实际的密码
